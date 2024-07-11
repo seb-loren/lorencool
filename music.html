@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music - Seb Loren</title>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'MuseoModerno', cursive;
+            background-color: #fff;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px 0;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .header a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .icons {
+            display: flex;
+            gap: 10px;
+        }
+        .icons img {
+            width: 30px;
+            height: 30px;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 50px;
+        }
+        .music-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .album {
+            width: 250px;
+            height: 250px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+            transition: box-shadow 0.3s ease-in-out;
+            text-decoration: none;
+        }
+        .album:hover {
+            box-shadow: 0 0 0 2px transparent, 0 0 0 10px grey;
+        }
+        .album::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 2px dotted grey;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .album:hover::after {
+            opacity: 1;
+        }
+        .album img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .icons {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" target="_blank">
+                <h1>seb loren</h1>
+            </a>
+            <div class="icons">
+                <a href="https://www.instagram.com/sebloren" target="_blank"><img src="icon_assets/insta_icon.png" alt="Instagram"></a>
+                <a href="https://www.tiktok.com/@sebloren" target="_blank"><img src="icon_assets/tt_icon.jpg" alt="TikTok"></a>
+                <a href="https://open.spotify.com/artist/xyz" target="_blank"><img src="icon_assets/spot_icon.svg" alt="Spotify"></a>
+                <a href="https://music.apple.com/artist/xyz" target="_blank"><img src="icon_assets/apple_icon.svg" alt="Music"></a>
+                <a href="https://soundcloud.com/sebloren" target="_blank"><img src="icon_assets/sc_icon.svg" alt="SoundCloud"></a>
+                <a href="https://sebloren.bandcamp.com" target="_blank"><img src="icon_assets/bandcamp_icon.svg" alt="Bandcamp"></a>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="music-section">
+                <a href="https://sebloren.bandcamp.com/track/drone-sketch-7-10" class="album" target="_blank">
+                    <img src="album_assets/dronesketchart.png" alt="Drone Sketch 7/10">
+                </a>
+                <!-- Add more albums here in the same format -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
